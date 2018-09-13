@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>da zhao hu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../dist/dzh.js"></script>
+</head>
+
+<body>
+    <div style="font-size: 20px; margin: auto;" id="container">
+
+    </div>
+    <script>
+        const container = document.getElementById('container')
+        const draw = () => {
+            const divEl = document.createElement('div')
+            divEl.textContent = dzh.say()
+            document.body.appendChild(divEl)
+        }
+        setInterval(draw, 1000)
+    </script>
+</body>
+
+</html>

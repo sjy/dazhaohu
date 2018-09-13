@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>da zhao hu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div style="font-size: 20px; margin: auto;" id="container">
+
+    </div>
+    <script type="module" crossorigin>
+        import dzh from '../dist/dzh.esm.js'
+
+        const container = document.getElementById('container')
+        const draw = () => {
+            const divEl = document.createElement('div')
+            divEl.textContent = dzh()
+            document.body.appendChild(divEl)
+        }
+        setInterval(draw, 1000)
+    </script>
+    <script nomodule>
+        alert('modules in browsers not suppprted yet!')
+    </script>
+</body>
+
+</html>

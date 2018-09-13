@@ -1,0 +1,43 @@
+{
+  "name": "dazhaohu",
+  "private": false,
+  "version": "1.0.0",
+  "description": "say greeting, 打招呼",
+  "main": "index.js",
+  "module": "dist/dzh.esm.js",
+  "jsnex:main": "dist/dzh.esm.js",
+  "bin": {
+    "dzh": "bin.js"
+  },
+  "homepage": "https://github.com/sjy/dazhaohu#README",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sjy/dazhaohu"
+  },
+  "files": [
+    "dist",
+    "bin.js",
+    "index.js"
+  ],
+  "scripts": {
+    "prebuild": "rm -rf ./dist/*",
+    "build": "npm run build:umd && npm run build:commonjs && npm run build:es",
+    "build:umd": "export BABEL_ENV=umd && babel src -o dist/dzh.js",
+    "build:es": "export BABEL_ENV=es && babel src -o dist/dzh.esm.js",
+    "build:commonjs": "export BABEL_ENV=commonjs && babel src -o dist/dzh.common.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "johnson",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.1",
+    "@babel/preset-env": "^7.0.0",
+    "babel-plugin-add-module-exports": "^1.0.0",
+    "babel-plugin-inline-json-import": "^0.2.1",
+    "prettier": "^1.14.2"
+  },
+  "dependencies": {
+    "commander": "^2.18.0"
+  }
+}
