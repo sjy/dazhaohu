@@ -6,6 +6,8 @@
   "main": "index.js",
   "module": "dist/dzh.esm.js",
   "jsnex:main": "dist/dzh.esm.js",
+  "unpkg": "dist/dzh.js",
+  "jsdelivr": "dist/dzh.js",
   "bin": {
     "dzh": "bin.js"
   },
@@ -26,6 +28,12 @@
     "build:es": "export BABEL_ENV=es && babel src -o dist/dzh.esm.js",
     "build:commonjs": "export BABEL_ENV=commonjs && babel src -o dist/dzh.common.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "browser": {
+    "index.js": "dist/dzh.js"
+  },
+  "engines": {
+    "node": ">=0.10.0"
   },
   "author": "johnson",
   "license": "MIT",

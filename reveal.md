@@ -22,6 +22,8 @@ history: true
 
 ### 漂亮的badge
 
+[shields.io](https://shields.io/#/)
+
 ### 发布到npm
 
 ### CLI
@@ -99,7 +101,7 @@ export default defaultExport = {}
 ## 构建
 
 - files, version, private
-- esModule
+- module, jsnext:main, browser
 
 ## 运行方式
 
@@ -107,6 +109,17 @@ export default defaultExport = {}
 - 可执行 (可选)
 
 ### commander
+
+```bash
+npx dzh -n 10
+```
+
+## 发布
+
+```bash
+npm login
+npm publish
+```
 
 ## Open Source CDN
 
