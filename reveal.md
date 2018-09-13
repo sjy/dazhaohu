@@ -13,20 +13,32 @@ history: true
 
 ---
 
-## 能用 ?
+## 啥叫能用 ?
+
+--
 
 ### 多环境
 
 - browser
 - node
 
-### 漂亮的badge
+--
 
-[shields.io](https://shields.io/#/)
+### 漂亮的[badge](https://shields.io/#/)
 
-### 发布到npm
+--
 
-### CLI
+### 发布到[npm](https://www.npmjs.com/package/dazhaohu)
+
+--
+
+### CLI[可选]
+
+```bash
+npx your-custome-command ...[option]
+```
+
+---
 
 ## 讲完了
 
@@ -36,15 +48,22 @@ npm build
 npm publish
 ```
 
-## package.json
+---
+
+## [package.json](https://docs.npmjs.com/files/package.json)
 
 - [npm](https://registry.npmjs.org/npm/latest)
+- webpack realated: `module`, `jsnext:main`, `browser`
+- publish related: `files`, `version`, `private`, `publishConfig`
+- `directories`: `bin`, `doc`, `test`, `lib`, `example`
 
-- 字段分类
+---
 
-## 规范
+## Module规范
 
 [vue-dist](https://github.com/vuejs/vue/tree/dev/dist)
+
+--
 
 ### CommonJS/CJS
 
@@ -54,6 +73,8 @@ const depMod = require('someMod')
 module.exports = exportMod
 ```
 
+--
+
 ### ES Module
 
 ```js
@@ -62,6 +83,8 @@ import { namedExp }, defaultExp from 'someMod'
 export const namedExport = {}
 export default defaultExport = {}
 ```
+
+--
 
 ### UMD
 
@@ -88,61 +111,63 @@ export default defaultExport = {}
 })
 ```
 
-### mjs
+--
+
+### [mjs](https://jakearchibald.com/2017/es-modules-in-browsers/)
 
 ```html
 <script nomodule src="fallback.js"></script>
 <script type="module">
-  import {addTextToBody} from './utils.mjs';
+  import { addTextToBody } from './utils.mjs';
   addTextToBody('Modules are pretty cool.');
 </script>
 ```
 
-## 构建
+---
 
-- files, version, private
-- module, jsnext:main, browser
+## 构建 - Babel
 
-## 运行方式
+---
 
-- 可依赖
-- 可执行 (可选)
-
-### commander
-
-```bash
-npx dzh -n 10
-```
-
-## 发布
+## npm 发布
 
 ```bash
 npm login
+# update package
+npm version <newVersion>
 npm publish
 ```
 
-## Open Source CDN
+--
+
+### cnpm [sync](https://npm.kezaihui.com/sync/dazhoahu)
+
+--
+
+### Open Source CDN
 
 - [jsDelivr](https://www.jsdelivr.com/)
-- unpkg
+- [unpkg](https://unpkg.com/dazhaohu@1.0.2/dist/dzh.js)
 - cdnjs
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/package@version/file"></script>
+<script src="https://cdn.jsdelivr.net/npm/dazhaohu@1.0.2/dist/dzh.js"></script>
 ```
 
+---
+
 ## 谢谢
+
+---
 
 ## 参考
 
 - [compat-table](https://kangax.github.io/compat-table/es6/)
-- [module-in-browser](https://jakearchibald.com/2017/es-modules-in-browsers/)
 - [Packages-wiki](http://wiki.commonjs.org/wiki/Packages/1.0)
 - [vue](https://github.com/vuejs/vue)
 - [axios](https://github.com/axios/axios)
 - [antd](https://github.com/ant-design/ant-design)
-- [jsDelivr-vue](http://wiki.commonjs.org/wiki/Packages)
 - [understanding-exports](https://www.sitepoint.com/understanding-module-exports-exports-node-js/)
 - [babel runtime vs babel-polyfill](https://juejin.im/post/5aefe0a6f265da0b9e64fa54)
 - [babel-plugin-import](https://github.com/ant-design/babel-plugin-import)
