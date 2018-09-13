@@ -9,7 +9,7 @@ loop: true
 history: true
 ---
 
-# 怎么写一个能用的 npm 包
+# 怎么写一个能用的 [npm](https://docs.npmjs.com/all) 包
 
 ---
 
@@ -52,7 +52,8 @@ npm publish
 
 ## [package.json](https://docs.npmjs.com/files/package.json)
 
-- [npm](https://registry.npmjs.org/npm/latest)
+- [all in one page](https://docs.npmjs.com/all)
+- [npm package](https://registry.npmjs.org/npm/latest)
 - webpack realated: `module`, `jsnext:main`, `browser`
 - publish related: `files`, `version`, `private`, `publishConfig`
 - `directories`: `bin`, `doc`, `test`, `lib`, `example`
@@ -163,6 +164,7 @@ npm publish
 
 ## 参考
 
+- [npm all docs]()
 - [compat-table](https://kangax.github.io/compat-table/es6/)
 - [Packages-wiki](http://wiki.commonjs.org/wiki/Packages/1.0)
 - [vue](https://github.com/vuejs/vue)
