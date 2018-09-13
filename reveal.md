@@ -103,7 +103,7 @@ export default defaultExport = {}
   }
   // Browser
   else {
-    root.add = factory();
+    root.moduleName = factory();
   }
 })(this, function () {
   "use strict";
@@ -164,7 +164,6 @@ npm publish
 
 ## 参考
 
-- [npm all docs]()
 - [compat-table](https://kangax.github.io/compat-table/es6/)
 - [Packages-wiki](http://wiki.commonjs.org/wiki/Packages/1.0)
 - [vue](https://github.com/vuejs/vue)
