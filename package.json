@@ -3,6 +3,13 @@
   "private": false,
   "version": "1.0.1",
   "description": "say greeting, 打招呼",
+  "keywords": [
+    "npm",
+    "node",
+    "greeting",
+    "boilerplate",
+    "打招呼"
+  ],
   "main": "index.js",
   "module": "dist/dzh.esm.js",
   "jsnex:main": "dist/dzh.esm.js",
