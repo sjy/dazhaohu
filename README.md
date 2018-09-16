@@ -25,9 +25,11 @@ npx dzh --help
 dzh -n 5
 ```
 
-## TODO
+## NOTICE
 
-* [ ] eslint
-* [ ] TS Version
-* [ ] CI
-* [ ] Unit Test
+If you want to execute `fixture/tryesm.mjs`, make sure your systems' nodejs version has been updated to v10 or later and execute with [--experimental-modules](https://nodejs.org/api/esm.html) option.
+
+``` bash
+node --experimental-modules fixtrue/tryesm.mjs
+
+```

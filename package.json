@@ -11,8 +11,8 @@
     "打招呼"
   ],
   "main": "index.js",
-  "module": "dist/dzh.esm.js",
-  "jsnex:main": "dist/dzh.esm.js",
+  "module": "dist/dzh.esm.mjs",
+  "jsnex:main": "dist/dzh.esm.mjs",
   "unpkg": "dist/dzh.js",
   "jsdelivr": "dist/dzh.js",
   "bin": {
@@ -32,7 +32,7 @@
     "prebuild": "rimraf ./dist/*",
     "build": "npm run build:umd && npm run build:commonjs && npm run build:es",
     "build:umd": "cross-env BABEL_ENV=umd babel src -o dist/dzh.js",
-    "build:es": "cross-env BABEL_ENV=es babel src -o dist/dzh.esm.js",
+    "build:es": "cross-env BABEL_ENV=es babel src -o dist/dzh.esm.mjs",
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src -o dist/dzh.common.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
