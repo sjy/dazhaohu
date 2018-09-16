@@ -33,3 +33,7 @@ If you want to execute `fixture/tryesm.mjs`, make sure your systems' nodejs vers
 node --experimental-modules fixtrue/tryesm.mjs
 
 ```
+
+## TODO
+
+Remove ugly `postinstall` hack which caused by[babel-version-issue-with-jest](https://github.com/facebook/jest/issues/6913)

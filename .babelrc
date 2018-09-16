@@ -38,6 +38,11 @@
                 }]
             ],
             "moduleId": "dzh"
+        },
+        "test": {
+            "presets": [
+                [ "@babel/preset-env" ]
+            ]
         }
     },
     "plugins": [
