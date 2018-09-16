@@ -28,7 +28,6 @@ dzh -n 5
 ## TODO
 
 * [ ] cross-env
-* [ ] rimraf
 * [ ] eslint
 * [ ] TS Version
 * [ ] CI
