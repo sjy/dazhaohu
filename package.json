@@ -31,9 +31,9 @@
   "scripts": {
     "prebuild": "rimraf ./dist/*",
     "build": "npm run build:umd && npm run build:commonjs && npm run build:es",
-    "build:umd": "export BABEL_ENV=umd && babel src -o dist/dzh.js",
-    "build:es": "export BABEL_ENV=es && babel src -o dist/dzh.esm.js",
-    "build:commonjs": "export BABEL_ENV=commonjs && babel src -o dist/dzh.common.js",
+    "build:umd": "cross-env BABEL_ENV=umd babel src -o dist/dzh.js",
+    "build:es": "cross-env BABEL_ENV=es babel src -o dist/dzh.esm.js",
+    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src -o dist/dzh.common.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "browser": {
@@ -50,6 +50,7 @@
     "@babel/preset-env": "^7.0.0",
     "babel-plugin-add-module-exports": "^1.0.0",
     "babel-plugin-inline-json-import": "^0.2.1",
+    "cross-env": "^5.2.0",
     "prettier": "^1.14.2",
     "rmraf": "^1.0.3"
   },
