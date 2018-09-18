@@ -35,8 +35,16 @@
     "build:umd": "cross-env BABEL_ENV=umd babel src -o dist/dzh.js",
     "build:es": "cross-env BABEL_ENV=es babel src -o dist/dzh.esm.mjs",
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src -o dist/dzh.common.js",
+    "lint": "eslint .",
+    "precommit": "lint-staged",
     "test": "jest",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "browser": {
     "index.js": "dist/dzh.js"
@@ -56,8 +64,12 @@
     "babel-plugin-inline-json-import": "^0.2.1",
     "coveralls": "^3.0.2",
     "cross-env": "^5.2.0",
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "husky": "^0.14.3",
     "jest": "^23.6.0",
-    "prettier": "^1.14.2",
+    "lint-staged": "^7.2.2",
     "rmraf": "^1.0.3"
   },
   "dependencies": {
